@@ -1,14 +1,7 @@
+import { Link } from "react-router-dom";
+
 const DonatedCard = ({ card }) => {
-  const {
-    id,
-    image_2,
-    title,
-    Category,
-    price,
-    bg_color,
-    btn_color,
-    text_color,
-  } = card;
+  const {id,image_2,title,Category,price,bg_color,btn_color,text_color} = card;
   return (
     <div>
       <div className="flex">
@@ -33,14 +26,14 @@ const DonatedCard = ({ card }) => {
           <div>
             <p style={{ color: text_color }}>${price}</p>
           </div>
-          <div>
+          <Link to={`/Cards/${id}`}><div>
             <button
               className="p-1 px-2 rounded text-white"
               style={{ backgroundColor: text_color }}
             >
               View Details
             </button>
-          </div>
+          </div></Link>
         </div>
       </div>
     </div>

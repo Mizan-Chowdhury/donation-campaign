@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const checkLocalStorageCondition = () => {
   const storage = JSON.parse(localStorage.getItem("myDonation"));
   if (storage) {
@@ -13,7 +15,12 @@ const saveDonatedCardToLocalStorage = (donatedCard) => {
     cards.push(donatedCard);
     localStorage.setItem("myDonation", JSON.stringify(cards));
   }else{
-    console.log('already added')
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: `You have already made a generous donation.
+      Thank you for your support!`,
+    })
   }
 };
 export { saveDonatedCardToLocalStorage };
