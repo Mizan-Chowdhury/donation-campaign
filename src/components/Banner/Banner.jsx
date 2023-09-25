@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div
       style={{ backgroundImage: imgUrl }}
-      className="banner-container bg-cover bg-center h-[70vh]"
+      className="banner-container bg-contain bg-no-repeat bg-center h-[80vh]"
     >
       <div className="bg-white bg-opacity-90 h-full flex flex-col justify-center items-center">
         <h1 className="text-2xl lg:text-5xl font-bold mb-10">

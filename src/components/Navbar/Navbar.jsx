@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div >
-      <div className="navbar flex lg:flex-row justify-between lg:py-4 px-5 lg:px-32">
+      <div className="navbar flex lg:flex-row justify-between py-5 px-5 lg:px-32">
         <div className="flex items-center">
           <img className="w-52" src="/public/image/Logo.png" alt="" />
         </div>
         <div>
-          <div className="navbar-center flex-1 hidden lg:flex space-x-10">
+          <div className="navbar-center flex-1 hidden lg:flex space-x-10 text-lg">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
