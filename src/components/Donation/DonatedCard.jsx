@@ -26,14 +26,16 @@ const DonatedCard = ({ card }) => {
           <div>
             <p style={{ color: text_color }}>${price}</p>
           </div>
-          <Link to={`/Cards/${id}`}><div>
+          <div>
+          <Link to={`/Cards/${id}`}>
             <button
               className="p-1 px-2 rounded text-white"
               style={{ backgroundColor: text_color }}
             >
               View Details
             </button>
-          </div></Link>
+          </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -66,7 +66,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex="0"
-                className="menu dropdown-content mt-2 p-5 shadow bg-base-100 rounded-box relative -ml-28 w-40 space-y-2"
+                className="menu dropdown-content p-5 shadow bg-base-100 rounded-box absolute -mb-1 -ml-28 w-40 space-y-2"
               >
                 <NavLink
                   to="/"
