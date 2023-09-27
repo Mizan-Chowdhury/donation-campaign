@@ -3,16 +3,20 @@ import DonatedCard from "./DonatedCard";
 
 const Donation = () => {
   const [data, setData] = useState([]);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [seeAll, setSeeAll] = useState(false);
   useEffect(() => {
     const getLsData = JSON.parse(localStorage.getItem("myDonation"));
     if (getLsData) {
       setData(getLsData);
     } else {
-      setError("");
+      setError(<div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center space-y-3">
+      <h1 className="text-6xl font-bold">No donation found.</h1>
+      <p className="text-xl">Please make a donation. Thank you.</p>
+      <p className="text-xl">{error.statusText || error.message}</p>
+    </div>);
     }
-  }, []);
+  }, [error.statusText, error.message]);
   return (
     <div>
       {error ? (

@@ -12,6 +12,8 @@ const ClickedCards = () => {
       setCard(clickedCards);
     }
   }, [cards, id]);
+
+
   return (
     <div className="py-10"><ClickedCard card={card}></ClickedCard></div>
   );

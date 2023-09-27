@@ -12,6 +12,7 @@ const ClickedCard = ({ card }) => {
     );
     saveDonatedCardToLocalStorage(card);
   };
+
   return (
     <div className="px-2 lg:px-32 ">
       <div className="rounded relative">
