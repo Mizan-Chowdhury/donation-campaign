@@ -4,6 +4,8 @@ import { useState } from "react";
 const Banner = ({ handleInputValue }) => {
   const [inputValue, setInputValue] = useState("");
 
+  console.log()
+
   const imgUrl = "url(/rectangle-4281.png)";
   return (
     <div
@@ -22,7 +24,7 @@ const Banner = ({ handleInputValue }) => {
             placeholder="Search here...."
           />
           <button
-            onClick={() => handleInputValue(inputValue)}
+            onClick={() => handleInputValue(inputValue.charAt(0).toUpperCase() + inputValue.slice(1))}
             className="absolute -ml-[88px] p-2 lg:mt-[1px]
           px-5 bg-[#FF444A] rounded-r text-white"
           >
