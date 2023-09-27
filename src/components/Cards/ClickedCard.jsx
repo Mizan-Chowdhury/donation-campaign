@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Swal from "sweetalert2";
 import { saveDonatedCardToLocalStorage } from "../utility/donatedCards";
 
@@ -14,7 +15,7 @@ const ClickedCard = ({ card }) => {
   };
 
   return (
-    <div className="px-2 lg:px-32 ">
+    <div className="px-2 lg:px-32 mt-14 lg:mt-0">
       <div className="rounded relative">
         <img className="w-full h-[75vh] rounded-3xl" src={image} alt="" />
         <div className="absolute bg-black bg-opacity-50 bottom-0 right-0 left-0 py-7 rounded-b-3xl">
@@ -37,4 +38,9 @@ const ClickedCard = ({ card }) => {
   );
 };
 
+
 export default ClickedCard;
+
+ClickedCard.propTypes ={
+  card : PropTypes.object.isRequired
+}

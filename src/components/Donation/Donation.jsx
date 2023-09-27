@@ -22,14 +22,14 @@ const Donation = () => {
       {error ? (
         <p>{error}</p>
       ) : seeAll ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-5 pt-10 lg:px-32">
-          {data?.map((card) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-5 pt-10 lg:px-32 py-5">
+          {data.map((card) => (
             <DonatedCard key={card.id} card={card}></DonatedCard>
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-5 pt-10 lg:px-32">
-          {data?.slice(0, 4).map((card) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-5 pt-10 lg:px-32 py-5">
+          {data.slice(0, 4).map((card) => (
             <DonatedCard key={card.id} card={card}></DonatedCard>
           ))}
         </div>

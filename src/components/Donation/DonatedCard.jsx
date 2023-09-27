@@ -1,7 +1,17 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const DonatedCard = ({ card }) => {
-  const {id,image_2,title,Category,price,bg_color,btn_color,text_color} = card;
+  const {
+    id,
+    image_2,
+    title,
+    Category,
+    price,
+    bg_color,
+    btn_color,
+    text_color,
+  } = card;
   return (
     <div>
       <div className="flex">
@@ -27,14 +37,14 @@ const DonatedCard = ({ card }) => {
             <p style={{ color: text_color }}>${price}</p>
           </div>
           <div>
-          <Link to={`/Cards/${id}`}>
-            <button
-              className="p-1 px-2 rounded text-white"
-              style={{ backgroundColor: text_color }}
-            >
-              View Details
-            </button>
-          </Link>
+            <Link to={`/Cards/${id}`}>
+              <button
+                className="p-1 px-2 rounded text-white"
+                style={{ backgroundColor: text_color }}
+              >
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -43,3 +53,7 @@ const DonatedCard = ({ card }) => {
 };
 
 export default DonatedCard;
+
+DonatedCard.propTypes = {
+  card: PropTypes.object.isRequired,
+};

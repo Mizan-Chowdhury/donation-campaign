@@ -2,7 +2,6 @@ import { useRouteError } from "react-router-dom";
 
 const Error = () => {
   const error = useRouteError();
-  console.log(error);
   return (
     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center space-y-3">
       <h1 className="text-6xl font-bold">Oops!</h1>

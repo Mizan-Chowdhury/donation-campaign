@@ -12,7 +12,7 @@ const Statistics = () => {
 
   let donatedPercent = 0;
   if (LCData) {
-    const donatedData = LCData?.map((data) => data.length);
+    const donatedData = LCData.map((data) => data.length);
     donatedPercent = (donatedData.length / jsonData.length) * 100;
   }
   const totalDonation = 100 - donatedPercent;
