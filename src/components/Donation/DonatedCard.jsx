@@ -12,14 +12,15 @@ const DonatedCard = ({ card }) => {
     btn_color,
     text_color,
   } = card;
+
   return (
     <div>
-      <div className="flex">
-        <div className="w-72">
+      <div className="flex flex-grow">
+        <div className="flex-grow">
           <img className="w-full h-full" src={image_2} alt="" />
         </div>
         <div
-          className="p-4 rounded-r-lg space-y-2 w-full"
+          className="p-4 rounded-r-lg space-y-1 lg:space-y-2 w-full flex-grow"
           style={{ backgroundColor: bg_color }}
         >
           <div
@@ -31,10 +32,10 @@ const DonatedCard = ({ card }) => {
             </p>
           </div>
           <div>
-            <h1 className="text-xl font-bold">{title}</h1>
+            <h1 className="text-lg lg:text-xl font-bold">{title}</h1>
           </div>
           <div>
-            <p style={{ color: text_color }}>${price}</p>
+            <p style={{ color: text_color }}>${price.toFixed(2)}</p>
           </div>
           <div>
             <Link to={`/Cards/${id}`}>

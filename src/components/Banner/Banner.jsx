@@ -11,7 +11,7 @@ const Banner = ({ handleInputValue }) => {
       className="h-[65vh] lg:h-[80vh] bg-center bg-cover bg-no-repeat"
     >
       <div className="bg-white bg-opacity-90 h-full flex flex-col justify-center items-center">
-        <h1 className="text-2xl lg:text-5xl font-bold mb-10">
+        <h1 className="text-2xl lg:text-6xl font-bold mb-10">
           I Grow By Helping People In Need
         </h1>
         <div>
