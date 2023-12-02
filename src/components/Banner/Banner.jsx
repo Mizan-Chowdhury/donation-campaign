@@ -4,8 +4,6 @@ import { useState } from "react";
 const Banner = ({ handleInputValue }) => {
   const [inputValue, setInputValue] = useState("");
 
-  console.log()
-
   const imgUrl = "url(/rectangle-4281.png)";
   return (
     <div
